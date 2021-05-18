@@ -1,0 +1,57 @@
+### Show all authors
+GET http://127.0.0.1:8000/api/authors/
+
+### Single Authors
+GET http://127.0.0.1:8000/api/authors/3
+
+### First POST Request
+POST http://127.0.0.1:8000/api/authors/
+Content-Type: application/json
+
+{
+    "name" : "",
+    "title" : "",
+    "company" : "TreeGarage",
+    "email" : "workemailtree@gmail.com"
+
+}
+
+### First author PUT request
+PUT http://127.0.0.1:8000/api/authors/1?_method=PUT
+Content-Type: application/json
+
+{
+    "name" : "Nealford Sotes",
+    "title" : "Information Technology Student",
+    "company" : "UCLM",
+    "email" : "nealfordsotesUCLM@gmail.com"
+}
+### First DELETE request
+DELETE http://127.0.0.1:8000/api/authors/2
+
+### ALL BOOKS
+GET http://127.0.0.1:8000/api/books/
+
+### SINGLE BOOKS
+GET http://127.0.0.1:8000/api/books/2
+
+### First Book PUT Request
+PUT http://127.0.0.1:8000/api/books/2?_method=PUT
+Content-Type: application/json
+
+{
+    "title" : "The title",
+    "author_id" : "2",
+    "abstract" : "The curse of manhattan"
+}
+
+### Store Book 
+POST http://127.0.0.1:8000/api/books
+Content-Type: application/json
+
+{
+    "title" : "The software",
+    "author_id" : "3",
+    "abstract" : "This is an abstract"
+
+}
